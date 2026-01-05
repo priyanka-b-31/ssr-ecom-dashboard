@@ -1,39 +1,39 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function AdminLogin() {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (e: React.FormEvent) => {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setError("");
 
-    const res = await fetch("/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (!res.ok) {
-      setError(data.error || "Login failed");
-      return;
+      if (!res.ok) {
+        setError(data.error || "Login failed");
+        return;
+      }
+
+      // ✅ IMPORTANT: redirect ONLY on success
+      window.location.href = "/admin/dashboard";
+    } catch (err) {
+      console.error("LOGIN CLIENT ERROR:", err);
+      setError("Server error");
     }
-
-    // ✅ store token in cookie
-    document.cookie = `token=${data.token}; path=/`;
-
-    // ✅ redirect to dashboard
-    router.push("/admin/dashboard");
-  };
+  }
 
   return (
     <div style={{ padding: 40 }}>
@@ -65,5 +65,6 @@ export default function AdminLogin() {
     </div>
   );
 }
+
 
 
