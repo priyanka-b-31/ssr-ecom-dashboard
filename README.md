@@ -1,36 +1,193 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🛒 Server-Rendered E-commerce Admin Dashboard
 
-## Getting Started
+A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard built with Next.js App Router, MongoDB, and Cloudinary.
+This project provides a complete admin interface to manage products with CRUD operations, image uploads, charts, and secure admin login.
 
-First, run the development server:
+🚀 Live Demo
 
-```bash
+🔗 Deployed on Vercel:
+👉 https://ssrecomdashboard.vercel.app
+
+🔐 Admin Login:
+👉 https://ssrecomdashboard.vercel.app/admin/login
+
+👤 Admin Credentials (Demo)
+Email: admin@example.com
+Password: admin123
+
+
+⚠️ For demo purposes only. In production, always change credentials.
+
+📌 Project Features
+🔐 Admin Authentication
+
+Secure admin login using bcrypt password hashing
+
+Admin data stored in MongoDB
+
+Seed admin API for first-time setup
+
+📦 Product Management (CRUD)
+
+Add new products
+
+Update price & stock
+
+Delete products
+
+Server Actions for secure mutations
+
+🖼 Image Upload (Cloudinary)
+
+Multi-step product creation form
+
+Upload product images to Cloudinary
+
+Image URL stored in MongoDB
+
+Images displayed in dashboard table
+
+📊 Data Visualization
+
+Stock Chart (per product)
+
+Price vs Stock Chart
+
+Built using chart components
+
+⚡ Server-Side Rendering (SSR)
+
+Dashboard data rendered on the server
+
+Faster load times
+
+SEO-friendly pages
+
+🌐 Deployment
+
+Deployed on Vercel
+
+MongoDB Atlas cloud database
+
+Cloudinary cloud storage
+
+🛠 Tech Stack
+
+Frontend
+
+Next.js 14 (App Router)
+
+React
+
+TypeScript
+
+Backend
+
+Next.js API Routes
+
+Server Actions
+
+MongoDB + Mongoose
+
+Authentication
+
+bcryptjs
+
+Image Storage
+
+Cloudinary
+
+Charts
+
+Chart components (Recharts / custom)
+
+Deployment
+
+Vercel
+
+MongoDB Atlas
+
+📂 Project Structure
+app/
+ ├── admin/
+ │   ├── login/
+ │   └── dashboard/
+ │       ├── page.tsx
+ │       ├── MultiStepAddForm.tsx
+ │       ├── ProductChart.tsx
+ │       └── PriceStockChart.tsx
+ │
+ ├── api/
+ │   ├── auth/login/route.ts
+ │   ├── products/route.ts
+ │   ├── upload/route.ts
+ │   └── seed-admin/route.ts
+ │
+ ├── lib/
+ │   ├── db.ts
+ │   └── cloudinary.ts
+ │
+models/
+ ├── Admin.ts
+ └── Product.ts
+
+🔑 Environment Variables
+
+Create a .env.local file (for local development):
+
+MONGODB_URI=your_mongodb_connection_string
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+
+On Vercel, add these under Project → Settings → Environment Variables
+
+▶️ How to Run Locally
+1️⃣ Clone the repository
+git clone https://github.com/your-username/ssr-ecom-dashboard.git
+cd ssr-ecom-dashboard
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Setup environment variables
+
+Create .env.local and add the values shown above.
+
+4️⃣ Seed admin user
+http://localhost:3000/api/seed-admin
+
+5️⃣ Run the project
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Visit:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Home → http://localhost:3000
 
-## Learn More
+Admin Login → http://localhost:3000/admin/login
 
-To learn more about Next.js, take a look at the following resources:
+Dashboard → http://localhost:3000/admin/dashboard
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧪 API Endpoints
+Method	Endpoint	Description
+POST	/api/auth/login	Admin login
+GET	/api/seed-admin	Seed admin user
+POST	/api/upload	Upload image to Cloudinary
+GET	/api/products	Fetch products
+POST	/api/products	Create product
+🧠 Learning Outcomes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Built a real SSR dashboard
 
-## Deploy on Vercel
+Used Next.js Server Actions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Integrated MongoDB Atlas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Implemented Cloudinary uploads
+
+Deployed a full-stack app on Vercel
+
+Understood authentication flow
