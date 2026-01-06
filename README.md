@@ -1,8 +1,9 @@
-🛒 Server-Rendered E-commerce Admin Dashboard
+Server-Rendered E-commerce Admin Dashboard
 
 A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard built with Next.js App Router, MongoDB, and Cloudinary.
 
 This project provides a complete admin interface to manage products with CRUD operations, image uploads, charts, and secure admin login.
+
 
 Live Deployment
 
@@ -10,16 +11,20 @@ Live URL: https://ssrecomdashboard.vercel.app
 
 Admin Login: https://ssrecomdashboard.vercel.app/admin/login
 
+
 Admin Credentials 
+
 Dummy credentials created (These credentials are created using a secure admin seed route)
 1. Email: admin@example.com
 2. Password: admin123
+
 
 Objective
 
 The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform.
 
 Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
+
 
 Project Description
 
@@ -32,6 +37,7 @@ Administrators can:
 2. Upload product images securely
 3. Visualize product stock and pricing data using charts
 4. Manage data through a clean, intuitive interface
+
 
 Core Features
 
@@ -53,6 +59,7 @@ Step 3: Pricing & stock
 
 6. Server-Side Rendering (SSR) : Dashboard is rendered on the server, no client-side fetching for admin data, improves performance and scalability
 
+
 Technology Stack:
 
 1. Frontend & Backend: Next.js (App Router), React, TypeScript
@@ -71,9 +78,11 @@ Application Workflow
 5. Admin performs CRUD operations
 6. Server revalidates and updates UI instantly
 
+
 Environment Variables
 1. Create a .env.local file and add: MONGODB_URI, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
 2. On Vercel, add these under Project → Settings → Environment Variables
+
 
 Steps to Run Locally:
 1. Clone the repository
@@ -86,6 +95,7 @@ Steps to Run Locally:
 Home → http://localhost:3000
 Admin Login → http://localhost:3000/admin/login
 Dashboard → http://localhost:3000/admin/dashboard
+
 
 API Endpoints
 
@@ -111,11 +121,12 @@ DELETE /api/products – Delete a product
 POST /api/upload
 Uploads product images to Cloudinary.
 
-Key Learnings:
 
-1.Practical use of Server-Side Rendering
-2.Building secure admin-only dashboards
-3.Integrating third-party services (Cloudinary)
-4.Full-stack deployment on Vercel
-5.Managing real-world application workflows
+Key Learnings
+
+1. Practical use of Server-Side Rendering
+2. Building secure admin-only dashboards
+3. Integrating third-party services (Cloudinary)
+4. Full-stack deployment on Vercel
+5. Managing real-world application workflows
 
