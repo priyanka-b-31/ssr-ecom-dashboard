@@ -9,13 +9,6 @@ Live Deployment:
 2. Admin Login: https://ssrecomdashboard.vercel.app/admin/login
 
 
-Admin Credentials:
-
-Dummy credentials created (These credentials are created using a secure admin seed route)
-1. Email: admin@example.com
-2. Password: admin123
-
-
 Objective:
 
 The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform. Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
@@ -36,7 +29,7 @@ Core Features:
 
 1. Admin Authentication : Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
    
-2. Product Management : Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products.Changes are reflected instantly via server revalidation.
+2. Product Management : Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products. Changes are reflected instantly via server revalidation.
 
 3. Multi-Step Product Form : Ensures structured and error-free product creation
 
@@ -46,9 +39,9 @@ Step 2: Image upload
 
 Step 3: Pricing & stock
 
-4. Image Upload & Storage : Product images are uploaded securely to Cloudinary, image URLs are stored in the database and the images are displayed in the dashboard table.
+4. Image Upload & Storage : Product images are uploaded securely to Cloudinary, image URLs are stored in the database and the images are displayed in the product table.
 
-5. Data Visualization : Stock level chart per product, Price vs stock comparison chart are displayed on the dashboard. It helps admins to quickly analyze inventory.
+5. Data Visualization : Stock level chart per product and Price vs stock comparison chart are displayed on the dashboard. It helps admins to quickly analyze inventory.
 
 6. Server-Side Rendering (SSR) : Dashboard is rendered on the server, no client-side fetching for admin data, improves performance and scalability
 
@@ -71,6 +64,12 @@ Application Workflow:
 5. Admin performs CRUD operations
 6. Server revalidates and updates UI instantly
 
+Admin Credentials:
+
+Dummy credentials created (These credentials are created using a secure admin seed route)
+1. Email: admin@example.com
+2. Password: admin123
+
 
 Environment Variables:
 1. Create a .env.local file and add: MONGODB_URI, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
@@ -83,12 +82,11 @@ Steps to Run Locally:
 3. Setup environment variables- Create .env.local and add the values
 4. Seed admin user- http://localhost:3000/api/seed-admin
 5. Run the project- npm run dev
-6. Now visit:
 
-Home → http://localhost:3000
-Admin Login → http://localhost:3000/admin/login
-Dashboard → http://localhost:3000/admin/dashboard
-
+Now visit:
+1. Home → http://localhost:3000
+2. Admin Login → http://localhost:3000/admin/login
+3. Dashboard → http://localhost:3000/admin/dashboard
 
 API Endpoints:
 
