@@ -1,8 +1,6 @@
 Server-Rendered E-commerce Admin Dashboard
 
-A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard built with Next.js App Router, MongoDB, and Cloudinary.
-
-This project provides a complete admin interface to manage products with CRUD operations, image uploads, charts, and secure admin login.
+A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard built with Next.js App Router, MongoDB, and Cloudinary. This project provides a complete admin interface to manage products with CRUD operations, image uploads, charts, and secure admin login.
 
 
 Live Deployment
@@ -21,16 +19,12 @@ Dummy credentials created (These credentials are created using a secure admin se
 
 Objective
 
-The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform.
-
-Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
+The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform. Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
 
 
 Project Description
 
-This project implements a real-world product management dashboard using Next.js App Router with server-side rendering.
-
-Product data is fetched and rendered on the server before being sent to the client, ensuring improved performance and consistency.
+This project implements a real-world product management dashboard using Next.js App Router with server-side rendering. Product data is fetched and rendered on the server before being sent to the client, ensuring improved performance and consistency.
 
 Administrators can:
 1. Add, edit, and delete products
@@ -99,27 +93,19 @@ Dashboard → http://localhost:3000/admin/dashboard
 
 API Endpoints
 
-1. Authentication
-   
-POST /api/auth/login
-Admin login using email and password.
+1. Authentication : POST /api/auth/login - Admin login using email and password.
 
-3. Admin Setup
-   
-GET /api/seed-admin
-Creates a default admin account (one-time setup for demo).
+2. Admin Setup : GET /api/seed-admin - Creates a default admin account (one-time setup for demo).
 
-4. Products
-
-GET /api/products – Fetch all products
-POST /api/products – Add a new product
-PUT /api/products – Update product price and stock
-DELETE /api/products – Delete a product
+3. Products
+1. GET /api/products – Fetch all products
+2. POST /api/products – Add a new product
+3. PUT /api/products – Update product price and stock
+4. DELETE /api/products – Delete a product
 
 4. Image Upload
-
-POST /api/upload
-Uploads product images to Cloudinary.
+1. POST /api/upload
+2. Uploads product images to Cloudinary.
 
 
 Key Learnings
