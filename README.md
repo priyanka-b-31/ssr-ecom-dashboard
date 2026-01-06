@@ -35,27 +35,9 @@ Administrators can:
 
 Core Features
 
-1.Admin Authentication:
-
--Secure admin login system
-
--Passwords hashed using bcrypt
-
--Admin seeding mechanism (not accessible to general users)
-
-2.Product Management:
-
--Create new products
-
--View all products
-
--Update price and stock
-
--Delete products
-
--Changes reflected instantly via server revalidation
-
-3.Multi-Step Product Form:
+1.Admin Authentication: Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
+2.Product Management: Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products.Changes are reflected instantly via server revalidation.
+3.Multi-Step Product Form: Ensures structured and error-free product creation
 
 Step 1: Product details
 
@@ -63,45 +45,20 @@ Step 2: Image upload
 
 Step 3: Pricing & stock
 
--Ensures structured and error-free product creation
+4.Image Upload & Storage: Product images are uploaded securely to Cloudinary, image URLs are stored in the database and the images are displayed in the dashboard table.
 
-4.Image Upload & Storage:
+5.Data Visualization: Stock level chart per product, Price vs stock comparison chart are displayed on the dashboard. It helps admins to quickly analyze inventory.
 
--Product images uploaded securely to Cloudinary
-
--Image URLs stored in the database
-
--Images displayed in the dashboard table
-
-5.Data Visualization:
-
--Stock level chart per product
-
--Price vs stock comparison chart
-
--Helps admins quickly analyze inventory
-
-6.Server-Side Rendering (SSR):
-
--Dashboard rendered on the server
-
--No client-side fetching for admin data
-
--Better performance and scalability
+6.Server-Side Rendering (SSR): Dashboard is rendered on the server, no client-side fetching for admin data, improves performance and scalability
 
 Technology Stack:
 
-Frontend & Backend: Next.js (App Router), React, TypeScript
-
-Data & Storage: MongoDB Atlas, Mongoose (ODM)
-
-Image Storage: Cloudinary
-
-Data Visualization: Chart.js
-
-Authentication: bcryptjs
-
-Deployment: Vercel
+1. Frontend & Backend: Next.js (App Router), React, TypeScript
+2. Data & Storage: MongoDB Atlas, Mongoose (ODM)
+3. Image Storage: Cloudinary
+4. Data Visualization: Chart.js
+5. Authentication: bcryptjs
+6. Deployment: Vercel
 
 
 Application Workflow
@@ -112,38 +69,9 @@ Application Workflow
 5. Admin performs CRUD operations
 6. Server revalidates and updates UI instantly
 
-
-📂 Project Structure
-app/
- ├── admin/
- │   ├── login/
- │   └── dashboard/
- │       ├── page.tsx
- │       ├── MultiStepAddForm.tsx
- │       ├── ProductChart.tsx
- │       └── PriceStockChart.tsx
- │
- ├── api/
- │   ├── auth/login/route.ts
- │   ├── products/route.ts
- │   ├── upload/route.ts
- │   └── seed-admin/route.ts
- │
- ├── lib/
- │   ├── db.ts
- │   └── cloudinary.ts
- │
-models/
- ├── Admin.ts
- └── Product.ts
-
 Environment Variables
-
-Create a .env.local file and add:
-
-MONGODB_URI, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
-
-On Vercel, add these under Project → Settings → Environment Variables
+1. Create a .env.local file and add: MONGODB_URI, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET
+2. On Vercel, add these under Project → Settings → Environment Variables
 
 Steps to Run Locally:
 1. Clone the repository
@@ -152,33 +80,37 @@ Steps to Run Locally:
 4. Seed admin user- http://localhost:3000/api/seed-admin
 5. Run the project- npm run dev
 6. Now visit:
+
 Home → http://localhost:3000
 Admin Login → http://localhost:3000/admin/login
 Dashboard → http://localhost:3000/admin/dashboard
 
-API Endpoints:
+API Endpoints
 
-Method	Endpoint	Description
+1. Authentication
+POST /api/auth/login
+Admin login using email and password.
 
-POST	/api/auth/login	Admin login
+2. Admin Setup
+GET /api/seed-admin
+Creates a default admin account (one-time setup for demo).
 
-GET	/api/seed-admin	Seed admin user
+3. Products
 
-POST	/api/upload	Upload image to Cloudinary
+GET /api/products – Fetch all products
+POST /api/products – Add a new product
+PUT /api/products – Update product price and stock
+DELETE /api/products – Delete a product
 
-GET	/api/products	Fetch products
+4. Image Upload
 
-POST	/api/products	Create product
+POST /api/upload
+Uploads product images to Cloudinary.
 
 Key Learnings:
-
--Practical use of Server-Side Rendering
-
--Building secure admin-only dashboards
-
--Integrating third-party services (Cloudinary)
-
--Full-stack deployment on Vercel
-
--Managing real-world application workflows
+1.Practical use of Server-Side Rendering
+2.Building secure admin-only dashboards
+3.Integrating third-party services (Cloudinary)
+4.Full-stack deployment on Vercel
+5.Managing real-world application workflows
 
