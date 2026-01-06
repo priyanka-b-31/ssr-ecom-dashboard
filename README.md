@@ -10,15 +10,15 @@ Live URL: https://ssrecomdashboard.vercel.app
 
 Admin Login: https://ssrecomdashboard.vercel.app/admin/login
 
-Dummy Admin Credentials created (These credentials are created using a secure admin seed route)
-
-Email: admin@example.com
-
-Password: admin123
+Admin Credentials 
+Dummy credentials created (These credentials are created using a secure admin seed route)
+1. Email: admin@example.com
+2. Password: admin123
 
 Objective
 
 The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform.
+
 Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
 
 Project Description
@@ -35,9 +35,11 @@ Administrators can:
 
 Core Features
 
-1.Admin Authentication: Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
-2.Product Management: Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products.Changes are reflected instantly via server revalidation.
-3.Multi-Step Product Form: Ensures structured and error-free product creation
+1. Admin Authentication : Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
+   
+2. Product Management : Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products.Changes are reflected instantly via server revalidation.
+
+3. Multi-Step Product Form : Ensures structured and error-free product creation
 
 Step 1: Product details
 
@@ -45,11 +47,11 @@ Step 2: Image upload
 
 Step 3: Pricing & stock
 
-4.Image Upload & Storage: Product images are uploaded securely to Cloudinary, image URLs are stored in the database and the images are displayed in the dashboard table.
+4. Image Upload & Storage : Product images are uploaded securely to Cloudinary, image URLs are stored in the database and the images are displayed in the dashboard table.
 
-5.Data Visualization: Stock level chart per product, Price vs stock comparison chart are displayed on the dashboard. It helps admins to quickly analyze inventory.
+5. Data Visualization : Stock level chart per product, Price vs stock comparison chart are displayed on the dashboard. It helps admins to quickly analyze inventory.
 
-6.Server-Side Rendering (SSR): Dashboard is rendered on the server, no client-side fetching for admin data, improves performance and scalability
+6. Server-Side Rendering (SSR) : Dashboard is rendered on the server, no client-side fetching for admin data, improves performance and scalability
 
 Technology Stack:
 
@@ -88,14 +90,16 @@ Dashboard → http://localhost:3000/admin/dashboard
 API Endpoints
 
 1. Authentication
+   
 POST /api/auth/login
 Admin login using email and password.
 
-2. Admin Setup
+3. Admin Setup
+   
 GET /api/seed-admin
 Creates a default admin account (one-time setup for demo).
 
-3. Products
+4. Products
 
 GET /api/products – Fetch all products
 POST /api/products – Add a new product
@@ -108,6 +112,7 @@ POST /api/upload
 Uploads product images to Cloudinary.
 
 Key Learnings:
+
 1.Practical use of Server-Side Rendering
 2.Building secure admin-only dashboards
 3.Integrating third-party services (Cloudinary)
