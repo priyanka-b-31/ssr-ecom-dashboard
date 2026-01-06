@@ -76,12 +76,13 @@ Environment Variables:
 2. On Vercel, add these under Project → Settings → Environment Variables
 
 
-Steps to Run Locally:
+Set up instructions:
 1. Clone the repository
 2. Install dependencies- npm install
 3. Setup environment variables- Create .env.local and add the values
 4. Seed admin user- http://localhost:3000/api/seed-admin
-5. Run the project- npm run dev
+5. Run the development server- npm run dev
+6. Prerequisites include Node.js (v18 or higher), MongoDB Atlas account, Cloudinary account (for image uploads)
 
 Now visit:
 1. Home → http://localhost:3000
