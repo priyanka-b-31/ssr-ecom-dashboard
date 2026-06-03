@@ -1,4 +1,4 @@
-Server-Rendered E-commerce Admin Dashboard
+Server-Side-Rendered E-commerce Admin Dashboard
 
 A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard built with Next.js App Router, MongoDB, and Cloudinary. This project provides a complete admin interface to manage products with CRUD operations, image uploads, charts, and secure admin login.
 
