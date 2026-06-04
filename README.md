@@ -5,7 +5,7 @@ A full-stack Server-Side Rendered (SSR) E-commerce Product Management Dashboard 
 
 Live Deployment: 
 
-1. Live URL: https://ssrecomdashboard.vercel.app
+1. Live Application: https://ssrecomdashboard.vercel.app
 2. Admin Login: https://ssrecomdashboard.vercel.app/admin/login
 
 
@@ -14,9 +14,9 @@ Objective:
 The objective of this project is to design and develop a server-side rendered (SSR) admin dashboard that allows administrators to efficiently manage products in an e-commerce platform. Server-side rendering ensures faster page loads, better SEO, and reliable data fetching, making the dashboard suitable for real production use cases.
 
 
-Project Description:
+Project Overview:
 
-This project implements a real-world product management dashboard using Next.js App Router with server-side rendering. Product data is fetched and rendered on the server before being sent to the client, ensuring improved performance and consistency.
+This project demonstrates a real-world product management system built using Next.js App Router with server-side rendering.Product data is fetched and rendered on the server before being sent to the client, ensuring improved performance and consistency.
 
 Administrators can:
 1. Add, edit, and delete products
@@ -27,7 +27,7 @@ Administrators can:
 
 Core Features:
 
-1. Admin Authentication : Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
+1. Secure Admin Authentication : Ensures secure admin login system, passwords are hashed using bcrypt, admin seeding mechanism is done (not accessible to general users)
    
 2. Product Management : Product CRUD includes creating new products, viewing all products, updating price and stock and deleting products. Changes are reflected instantly via server revalidation.
 
@@ -64,7 +64,7 @@ Application Workflow:
 5. Admin performs CRUD operations
 6. Server revalidates and updates UI instantly
 
-Admin Credentials:
+Demo Admin Credentials:
 
 Dummy credentials created (These credentials are created using a secure admin seed route)
 1. Email: admin@example.com
@@ -76,7 +76,7 @@ Environment Variables:
 2. On Vercel, add these under Project → Settings → Environment Variables
 
 
-Set up instructions:
+Local Set up instructions:
 1. Clone the repository
 2. Install dependencies- npm install
 3. Setup environment variables- Create .env.local and add the values
@@ -108,3 +108,8 @@ Key Learnings:
 4. Full-stack deployment on Vercel
 5. Managing real-world application workflows
 
+Author
+
+Priyanka B
+
+Built as a full-stack SSR project to demonstrate practical implementation of modern web development technologies using Next.js, MongoDB, Cloudinary, and Vercel.
