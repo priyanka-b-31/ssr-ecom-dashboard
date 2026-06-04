@@ -1,6 +1,7 @@
 {
   "name": "ecommerce-dashboard",
   "version": "0.1.0",
+  "description": "SSR e-commerce admin dashboard built with Next.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
