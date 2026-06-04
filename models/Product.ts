@@ -18,7 +18,7 @@ const ProductSchema = new Schema(
       min: 0,
     },
     image: {
-      type: String, // Cloudinary image URL
+      type: String, // Product image URL from Cloudinary
       required: false,
     },
   },
