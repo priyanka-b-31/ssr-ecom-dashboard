@@ -14,7 +14,7 @@
     "jsx": "react-jsx",
     "incremental": true,
 
-    /* 🔴 THIS WAS MISSING */
+    /* Base URL Configuration */
     "baseUrl": ".",
 
     /* ✅ ALIAS */
