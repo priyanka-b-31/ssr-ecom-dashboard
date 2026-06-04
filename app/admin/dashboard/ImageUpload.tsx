@@ -37,7 +37,7 @@ export default function ImageUpload({
         }}
       />
 
-      {uploading && <p>Uploading image...</p>}
+      {uploading && <p>Uploading Image...</p>}
     </div>
   );
 }
